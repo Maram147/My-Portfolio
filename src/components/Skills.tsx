@@ -45,11 +45,11 @@ const Skills = () => {
           {/* Section Header */}
           <div className="text-center mb-16 animate-fade-in">
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-              المهارات <span className="text-gradient">التقنية</span>
+              Technical <span className="text-gradient">Skills</span>
             </h2>
             <div className="w-20 h-1 bg-primary mx-auto mb-8"></div>
             <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-              مجموعة شاملة من المهارات التقنية التي اكتسبتها خلال مسيرتي المهنية
+              A comprehensive set of technical skills acquired throughout my professional journey
             </p>
           </div>
 
@@ -97,18 +97,18 @@ const Skills = () => {
           <div className="mt-16 text-center animate-fade-in">
             <div className="bg-gradient-to-r from-primary/10 to-blue-400/10 rounded-xl p-8 border border-primary/20">
               <h3 className="text-2xl font-bold text-foreground mb-4">
-                في تطوير مستمر
+                Continuous Learning
               </h3>
               <p className="text-muted-foreground text-lg">
-                أؤمن بأهمية التعلم المستمر في عالم التقنية السريع التطور. 
-                حالياً أتعلم Next.js و React Native لتوسيع مهاراتي.
+                I believe in the importance of continuous learning in the fast-evolving world of technology. 
+                Currently learning Next.js and React Native to expand my skill set.
               </p>
             </div>
           </div>
         </div>
       </div>
 
-      <style jsx>{`
+      <style>{`
         @keyframes skillBar {
           from {
             width: 0%;

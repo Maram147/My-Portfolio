@@ -28,31 +28,31 @@ const Hero = () => {
 
           {/* Main content */}
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6">
-            مرحباً، أنا{' '}
-            <span className="text-gradient">أحمد محمد</span>
+            Hi, I'm{' '}
+            <span className="text-gradient">Ahmed Mohamed</span>
           </h1>
           
           <h2 className="text-xl md:text-2xl lg:text-3xl text-muted-foreground mb-8 font-medium">
-            مطور Full Stack Developer
+            Full Stack Developer
           </h2>
           
           <p className="text-lg md:text-xl text-muted-foreground mb-12 max-w-3xl mx-auto leading-relaxed">
-            متخصص في تطوير تطبيقات الويب الحديثة باستخدام React، Node.js وتقنيات أخرى. 
-            أحب إنشاء حلول رقمية مبتكرة تجمع بين الوظائف والتصميم الجميل.
+            Specialized in developing modern web applications using React, Node.js, and other cutting-edge technologies. 
+            I love creating innovative digital solutions that combine functionality with beautiful design.
           </p>
 
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16">
             <button className="bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-4 rounded-full font-semibold transition-all duration-200 hover:scale-105 flex items-center gap-2">
               <Download className="h-5 w-5" />
-              تحميل السيرة الذاتية
+              Download Resume
             </button>
             
             <button 
               onClick={scrollToAbout}
               className="border border-primary text-primary hover:bg-primary/10 px-8 py-4 rounded-full font-semibold transition-all duration-200 hover:scale-105"
             >
-              تعرف علي أكثر
+              Learn More About Me
             </button>
           </div>
 

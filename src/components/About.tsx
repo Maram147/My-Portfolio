@@ -6,23 +6,23 @@ const About = () => {
   const highlights = [
     {
       icon: Code,
-      title: 'تطوير Frontend',
-      description: 'خبرة في React، Vue.js، و TypeScript'
+      title: 'Frontend Development',
+      description: 'Expertise in React, Vue.js, and TypeScript'
     },
     {
       icon: Database,
-      title: 'تطوير Backend',
-      description: 'Node.js، Express.js، و قواعد البيانات'
+      title: 'Backend Development',
+      description: 'Node.js, Express.js, and databases'
     },
     {
       icon: Palette,
       title: 'UI/UX Design',
-      description: 'تصميم واجهات مستخدم جذابة وسهلة الاستخدام'
+      description: 'Creating attractive and user-friendly interfaces'
     },
     {
       icon: Globe,
-      title: 'تطوير شامل',
-      description: 'حلول متكاملة من الفكرة إلى التنفيذ'
+      title: 'Full Stack Development',
+      description: 'Complete solutions from concept to implementation'
     }
   ];
 
@@ -33,7 +33,7 @@ const About = () => {
           {/* Section Header */}
           <div className="text-center mb-16 animate-fade-in">
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-              نبذة <span className="text-gradient">عني</span>
+              About <span className="text-gradient">Me</span>
             </h2>
             <div className="w-20 h-1 bg-primary mx-auto mb-8"></div>
           </div>
@@ -42,23 +42,23 @@ const About = () => {
             {/* Text Content */}
             <div className="animate-slide-up">
               <h3 className="text-2xl font-bold text-foreground mb-6">
-                مطور متحمس ومبدع
+                Passionate and Creative Developer
               </h3>
               
               <div className="space-y-4 text-muted-foreground text-lg leading-relaxed">
                 <p>
-                  أنا مطور Full Stack بخبرة 3+ سنوات في تطوير تطبيقات الويب الحديثة. 
-                  أتميز بالشغف للتعلم المستمر ومواكبة أحدث التقنيات في عالم البرمجة.
+                  I'm a Full Stack Developer with 3+ years of experience in developing modern web applications. 
+                  I'm passionate about continuous learning and staying up-to-date with the latest technologies in the programming world.
                 </p>
                 
                 <p>
-                  أؤمن بأن التقنية يجب أن تخدم الإنسان، لذلك أركز على إنشاء حلول عملية 
-                  تحل مشاكل حقيقية وتوفر تجربة مستخدم استثنائية.
+                  I believe that technology should serve humanity, so I focus on creating practical solutions 
+                  that solve real problems and provide exceptional user experiences.
                 </p>
                 
                 <p>
-                  عملت على أكثر من 20 مشروع مختلف، من المواقع الشخصية إلى التطبيقات 
-                  المعقدة للشركات الكبيرة، مما أكسبني خبرة واسعة في مختلف جوانب التطوير.
+                  I've worked on more than 20 different projects, from personal websites to complex applications 
+                  for large companies, giving me extensive experience in various aspects of development.
                 </p>
               </div>
 
@@ -66,11 +66,11 @@ const About = () => {
               <div className="grid grid-cols-2 gap-6 mt-8">
                 <div className="text-center p-4 bg-card rounded-lg border border-border">
                   <div className="text-3xl font-bold text-primary mb-2">20+</div>
-                  <div className="text-muted-foreground">مشروع مكتمل</div>
+                  <div className="text-muted-foreground">Completed Projects</div>
                 </div>
                 <div className="text-center p-4 bg-card rounded-lg border border-border">
                   <div className="text-3xl font-bold text-primary mb-2">3+</div>
-                  <div className="text-muted-foreground">سنوات خبرة</div>
+                  <div className="text-muted-foreground">Years Experience</div>
                 </div>
               </div>
             </div>

@@ -26,12 +26,12 @@ const Header = () => {
   };
 
   const navItems = [
-    { id: 'hero', label: 'الرئيسية' },
-    { id: 'about', label: 'نبذة عني' },
-    { id: 'skills', label: 'المهارات' },
-    { id: 'projects', label: 'المشاريع' },
-    { id: 'experience', label: 'الخبرة' },
-    { id: 'contact', label: 'التواصل' },
+    { id: 'hero', label: 'Home' },
+    { id: 'about', label: 'About' },
+    { id: 'skills', label: 'Skills' },
+    { id: 'projects', label: 'Projects' },
+    { id: 'experience', label: 'Experience' },
+    { id: 'contact', label: 'Contact' },
   ];
 
   return (
