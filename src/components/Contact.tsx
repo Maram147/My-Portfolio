@@ -28,20 +28,20 @@ const Contact = () => {
   const contactInfo = [
     {
       icon: Mail,
-      title: 'البريد الإلكتروني',
+      title: 'Email',
       value: 'ahmed@example.com',
       link: 'mailto:ahmed@example.com'
     },
     {
       icon: Phone,
-      title: 'رقم الهاتف',
-      value: '+966 50 123 4567',
-      link: 'tel:+966501234567'
+      title: 'Phone',
+      value: '+201021579696',
+      link: 'tel:+201021579696'
     },
     {
       icon: MapPin,
-      title: 'الموقع',
-      value: 'الرياض، السعودية',
+      title: 'Location',
+      value: 'Egypt,Qena',
       link: null
     }
   ];
@@ -153,14 +153,14 @@ const Contact = () => {
             <div className="animate-slide-up" style={{ animationDelay: '0.2s' }}>
               <div className="bg-card rounded-xl p-8 border border-border shadow-lg">
                 <h3 className="text-2xl font-bold text-foreground mb-6">
-                  أرسل رسالة
+                  Sent Message
                 </h3>
 
                 <form onSubmit={handleSubmit} className="space-y-6">
                   <div className="grid md:grid-cols-2 gap-4">
                     <div>
                       <label htmlFor="name" className="block text-sm font-medium text-foreground mb-2">
-                        الاسم *
+                       Name
                       </label>
                       <input
                         type="text"
@@ -170,13 +170,13 @@ const Contact = () => {
                         onChange={handleInputChange}
                         required
                         className="w-full px-4 py-3 bg-background border border-border rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition-all duration-200"
-                        placeholder="اسمك الكامل"
+                        placeholder="Full Name"
                       />
                     </div>
                     
                     <div>
                       <label htmlFor="email" className="block text-sm font-medium text-foreground mb-2">
-                        البريد الإلكتروني *
+                        Email
                       </label>
                       <input
                         type="email"
@@ -193,7 +193,7 @@ const Contact = () => {
 
                   <div>
                     <label htmlFor="subject" className="block text-sm font-medium text-foreground mb-2">
-                      الموضوع *
+                      Subject
                     </label>
                     <input
                       type="text"
@@ -203,13 +203,13 @@ const Contact = () => {
                       onChange={handleInputChange}
                       required
                       className="w-full px-4 py-3 bg-background border border-border rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition-all duration-200"
-                      placeholder="موضوع الرسالة"
+                      placeholder="Message Subject"
                     />
                   </div>
 
                   <div>
                     <label htmlFor="message" className="block text-sm font-medium text-foreground mb-2">
-                      الرسالة *
+                      Message
                     </label>
                     <textarea
                       id="message"
@@ -219,7 +219,7 @@ const Contact = () => {
                       onChange={handleInputChange}
                       required
                       className="w-full px-4 py-3 bg-background border border-border rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition-all duration-200 resize-none"
-                      placeholder="اكتب رسالتك هنا..."
+                      placeholder="Write Message...."
                     ></textarea>
                   </div>
 
@@ -228,7 +228,7 @@ const Contact = () => {
                     className="w-full bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-4 rounded-lg font-semibold transition-all duration-200 hover:scale-105 flex items-center justify-center gap-2"
                   >
                     <Send className="h-5 w-5" />
-                    إرسال الرسالة
+                    Sent
                   </button>
                 </form>
               </div>

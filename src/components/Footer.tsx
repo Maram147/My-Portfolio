@@ -10,15 +10,15 @@ const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-card border-t border-border">
+    <footer className="bg-blue-500 border-t border-border">
       <div className="container mx-auto px-4 py-12">
         <div className="max-w-6xl mx-auto">
           {/* Footer Content */}
           <div className="grid md:grid-cols-3 gap-8 mb-8">
             {/* Brand Section */}
             <div className="space-y-4">
-              <h3 className="text-2xl font-bold text-gradient">
-                Portfolio
+              <h3 className="text-2xl font-bold text-White">
+                Maram Mahmoud
               </h3>
               <p className="text-muted-foreground leading-relaxed">
                 مطور Full Stack متحمس لإنشاء حلول رقمية مبتكرة وتطبيقات ويب عالية الجودة.
@@ -69,22 +69,22 @@ const Footer = () => {
 
           {/* Bottom Section */}
           <div className="border-t border-border pt-8">
-            <div className="flex flex-col md:flex-row justify-between items-center gap-4">
+            <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-center">
               {/* Copyright */}
               <div className="flex items-center gap-2 text-muted-foreground">
                 <span>© {currentYear} جميع الحقوق محفوظة. صُنع بـ</span>
                 <Heart className="h-4 w-4 text-red-500 fill-current" />
                 <span>في السعودية</span>
-              </div>
-
-              {/* Back to Top */}
-              <button
+                <button
                 onClick={scrollToTop}
                 className="p-3 bg-primary hover:bg-primary/90 text-primary-foreground rounded-full transition-all duration-200 hover:scale-110"
                 title="العودة للأعلى"
               >
                 <ArrowUp className="h-5 w-5" />
               </button>
+              </div>
+
+      
             </div>
           </div>
         </div>

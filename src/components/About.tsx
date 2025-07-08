@@ -47,32 +47,10 @@ const About = () => {
               
               <div className="space-y-4 text-muted-foreground text-lg leading-relaxed">
                 <p>
-                  I'm a Full Stack Developer with 3+ years of experience in developing modern web applications. 
-                  I'm passionate about continuous learning and staying up-to-date with the latest technologies in the programming world.
+                  My name is Maram Mahmoud, a fourth-year student at South Valley National University, Faculty of Computers and Artificial Intelligence. I participated in the ICPC competition for two consecutive years and served as a mentor in the university's ICPC community, where I taught problem solving and C++. I also completed an internship at NetArabia and finished the Route Frontend Diploma.
                 </p>
                 
-                <p>
-                  I believe that technology should serve humanity, so I focus on creating practical solutions 
-                  that solve real problems and provide exceptional user experiences.
-                </p>
-                
-                <p>
-                  I've worked on more than 20 different projects, from personal websites to complex applications 
-                  for large companies, giving me extensive experience in various aspects of development.
-                </p>
-              </div>
-
-              {/* Stats */}
-              <div className="grid grid-cols-2 gap-6 mt-8">
-                <div className="text-center p-4 bg-card rounded-lg border border-border">
-                  <div className="text-3xl font-bold text-primary mb-2">20+</div>
-                  <div className="text-muted-foreground">Completed Projects</div>
-                </div>
-                <div className="text-center p-4 bg-card rounded-lg border border-border">
-                  <div className="text-3xl font-bold text-primary mb-2">3+</div>
-                  <div className="text-muted-foreground">Years Experience</div>
-                </div>
-              </div>
+              </div>              
             </div>
 
             {/* Highlights Grid */}

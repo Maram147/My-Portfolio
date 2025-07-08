@@ -15,17 +15,6 @@ const Skills = () => {
       ]
     },
     {
-      title: 'Backend Development',
-      skills: [
-        { name: 'Node.js', level: 85 },
-        { name: 'Express.js', level: 80 },
-        { name: 'MongoDB', level: 75 },
-        { name: 'MySQL', level: 70 },
-        { name: 'RESTful APIs', level: 85 },
-        { name: 'GraphQL', level: 65 }
-      ]
-    },
-    {
       title: 'Tools & Others',
       skills: [
         { name: 'Git/GitHub', level: 90 },
@@ -54,7 +43,7 @@ const Skills = () => {
           </div>
 
           {/* Skills Grid */}
-          <div className="grid lg:grid-cols-3 gap-8">
+          <div className="grid lg:grid-cols-2 gap-8">
             {skillCategories.map((category, categoryIndex) => (
               <div 
                 key={categoryIndex}
