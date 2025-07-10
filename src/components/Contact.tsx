@@ -1,6 +1,8 @@
 
 import React, { useState } from 'react';
-import { Mail, Phone, MapPin, Send, Github, Linkedin, Twitter } from 'lucide-react';
+import { Mail, Phone, MapPin, Send,  Twitter } from 'lucide-react';
+import { FaGithub } from "react-icons/fa";
+import { FaLinkedin } from "react-icons/fa";
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -20,17 +22,15 @@ const Contact = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // Handle form submission here
     console.log('Form submitted:', formData);
-    // You can integrate with your preferred email service or backend
   };
 
   const contactInfo = [
     {
       icon: Mail,
       title: 'Email',
-      value: 'ahmed@example.com',
-      link: 'mailto:ahmed@example.com'
+      value: 'mahmoudmaram002@gmail.com',
+      link: 'mailto:mahmoudmaram002@gmail.com'
     },
     {
       icon: Phone,
@@ -48,27 +48,21 @@ const Contact = () => {
 
   const socialLinks = [
     {
-      icon: Github,
+      icon: FaGithub ,
       name: 'GitHub',
       link: 'https://github.com',
       color: 'hover:text-gray-600'
     },
     {
-      icon: Linkedin,
+      icon: FaLinkedin,
       name: 'LinkedIn',
-      link: 'https://linkedin.com',
+      link: 'https://linkedin.com/Maram147',
       color: 'hover:text-blue-600'
-    },
-    {
-      icon: Twitter,
-      name: 'Twitter',
-      link: 'https://twitter.com',
-      color: 'hover:text-blue-400'
     },
     {
       icon: Mail,
       name: 'Email',
-      link: 'mailto:ahmed@example.com',
+      link: 'mailto:mahmoudmaram002@gmail.com',
       color: 'hover:text-red-500'
     }
   ];
@@ -95,10 +89,7 @@ const Contact = () => {
                 دعنا نتحدث
               </h3>
               
-              <p className="text-muted-foreground text-lg mb-8 leading-relaxed">
-                أنا دائماً متحمس للعمل على مشاريع جديدة ومثيرة. سواء كان لديك سؤال، 
-                فكرة مشروع، أو تريد فقط أن تقول مرحباً، لا تتردد في التواصل معي.
-              </p>
+              
 
               {/* Contact Cards */}
               <div className="space-y-4 mb-8">
@@ -131,7 +122,7 @@ const Contact = () => {
 
               {/* Social Links */}
               <div>
-                <h4 className="font-semibold text-foreground mb-4">تابعني على</h4>
+                <h4 className="font-semibold text-foreground mb-4">Follow me </h4>
                 <div className="flex gap-4">
                   {socialLinks.map((social, index) => (
                     <a
@@ -246,7 +237,7 @@ const Contact = () => {
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a
-                  href="mailto:ahmed@example.com"
+                  href="mailto:mahmoudmaram002@gmail.com"
                   className="bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-4 rounded-full font-semibold transition-all duration-200 hover:scale-105 inline-flex items-center justify-center gap-2"
                 >
                   <Mail className="h-5 w-5" />
@@ -257,7 +248,7 @@ const Contact = () => {
                   className="border border-primary text-primary hover:bg-primary/10 px-8 py-4 rounded-full font-semibold transition-all duration-200 hover:scale-105 inline-flex items-center justify-center gap-2"
                 >
                   <Phone className="h-5 w-5" />
-                  اتصل بي
+                  Contact me
                 </a>
               </div>
             </div>
