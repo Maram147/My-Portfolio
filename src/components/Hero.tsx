@@ -1,7 +1,8 @@
 
 import React from 'react';
-import { ArrowDown, Download, Github, Linkedin, Mail } from 'lucide-react';
-
+import { ArrowDown, Download, Mail } from 'lucide-react';
+import { FaGithub } from "react-icons/fa";
+import { FaLinkedin } from "react-icons/fa";
 const Hero = () => {
   const scrollToAbout = () => {
     const element = document.getElementById('about');
@@ -19,7 +20,7 @@ const Hero = () => {
         <div className="animate-fade-in">
           {/* Profile Image */}
           <div className="mt-20">
-            <img src="/public/maram.jpeg" alt="" className='w-32 h-32 md:w-40 md:h-40 mx-auto rounded-full ' />
+            <img src="/public/maram.jpeg" alt="Maram" className='w-32 h-32 md:w-40 md:h-40 mx-auto rounded-full ' />
           </div>
 
           {/* Main content */}
@@ -60,19 +61,19 @@ const Hero = () => {
           {/* Social Links */}
           <div className="flex justify-center space-x-6 mb-16">
             <a
-              href="#"
+              href="https://github.com/Maram147"
               className="p-3 rounded-full bg-secondary hover:bg-accent transition-all duration-200 hover:scale-110"
             >
-              <Github className="h-6 w-6 text-foreground" />
+              <FaGithub className="h-6 w-6 text-foreground" />
             </a>
             <a
-              href="#"
+              href="https://linkedin.com/devmaraam"
               className="p-3 rounded-full bg-secondary hover:bg-accent transition-all duration-200 hover:scale-110"
             >
-              <Linkedin className="h-6 w-6 text-foreground" />
+              < FaLinkedin className="h-6 w-6 text-foreground" />
             </a>
             <a
-              href="#"
+              href="mahmoudmaram002@gmail.com"
               className="p-3 rounded-full bg-secondary hover:bg-accent transition-all duration-200 hover:scale-110"
             >
               <Mail className="h-6 w-6 text-foreground" />

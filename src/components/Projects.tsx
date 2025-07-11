@@ -8,31 +8,31 @@ const Projects = () => {
   const projects = [
     {
       id: 1,
-      title: 'متجر إلكتروني متكامل',
+      title: 'Dwayee',
       description: 'منصة تجارة إلكترونية مطورة بـ React و Node.js مع نظام دفع آمن وإدارة المخزون',
-      image: '/placeholder.svg',
+      image: '/Dwayee.png',
       technologies: ['React', 'Node.js', 'MongoDB', 'Stripe'],
-      category: 'fullstack',
+      category: 'Front-End',
       demoLink: '#',
       githubLink: '#',
       featured: true
     },
     {
       id: 2,
-      title: 'تطبيق إدارة المهام',
+      title: 'Fresh-Cart',
       description: 'تطبيق ويب لإدارة المهام والمشاريع مع واجهة سهلة الاستخدام وإشعارات فورية',
-      image: '/placeholder.svg',
+      image: '/assets/images/Fresh-Cart.png',
       technologies: ['Vue.js', 'Express', 'Socket.io'],
-      category: 'frontend',
+      category: 'Front-End',
       demoLink: '#',
       githubLink: '#',
       featured: false
     },
     {
       id: 3,
-      title: 'نظام إدارة المحتوى',
+      title: 'Recipe-App',
       description: 'CMS مخصص للمدونات والمواقع الإخبارية مع محرر نصوص متقدم',
-      image: '/placeholder.svg',
+      image: '/assets/images/Recipe-App.png',
       technologies: ['React', 'GraphQL', 'PostgreSQL'],
       category: 'fullstack',
       demoLink: '#',
@@ -45,7 +45,7 @@ const Projects = () => {
       description: 'موقع تسويقي احترافي لشركة تقنية مع تصميم responsive وأداء متميز',
       image: '/placeholder.svg',
       technologies: ['HTML', 'CSS', 'JavaScript', 'GSAP'],
-      category: 'frontend',
+      category: 'Front-End',
       demoLink: '#',
       githubLink: '#',
       featured: false
@@ -67,7 +67,7 @@ const Projects = () => {
       description: 'dashboard تفاعلي لعرض الإحصائيات والبيانات مع charts ديناميكية',
       image: '/placeholder.svg',
       technologies: ['React', 'D3.js', 'Chart.js'],
-      category: 'frontend',
+      category: 'Front-End',
       demoLink: '#',
       githubLink: '#',
       featured: true
@@ -77,12 +77,12 @@ const Projects = () => {
   const filters = [
     { id: 'all', label: 'جميع المشاريع' },
     { id: 'fullstack', label: 'Full Stack' },
-    { id: 'frontend', label: 'Frontend' },
+    { id: 'Front-End', label: 'Front-End' },
     { id: 'backend', label: 'Backend' }
   ];
 
-  const filteredProjects = activeFilter === 'all' 
-    ? projects 
+  const filteredProjects = activeFilter === 'all'
+    ? projects
     : projects.filter(project => project.category === activeFilter);
 
   return (
@@ -106,11 +106,10 @@ const Projects = () => {
               <button
                 key={filter.id}
                 onClick={() => setActiveFilter(filter.id)}
-                className={`px-6 py-3 rounded-full font-medium transition-all duration-300 ${
-                  activeFilter === filter.id
-                    ? 'bg-primary text-primary-foreground shadow-lg'
-                    : 'bg-card text-foreground hover:bg-accent border border-border'
-                }`}
+                className={`px-6 py-3 rounded-full font-medium transition-all duration-300 ${activeFilter === filter.id
+                  ? 'bg-primary text-primary-foreground shadow-lg'
+                  : 'bg-card text-foreground hover:bg-accent border border-border'
+                  }`}
               >
                 {filter.label}
               </button>
@@ -122,15 +121,19 @@ const Projects = () => {
             {filteredProjects.map((project, index) => (
               <div
                 key={project.id}
-                className={`group relative bg-card rounded-xl overflow-hidden border border-border hover:shadow-2xl transition-all duration-500 hover:scale-105 animate-slide-up ${
-                  project.featured ? 'md:col-span-2 lg:col-span-1' : ''
-                }`}
+                className={`group relative bg-card rounded-xl overflow-hidden border border-border hover:shadow-2xl transition-all duration-500 hover:scale-105 animate-slide-up ${project.featured ? 'md:col-span-2 lg:col-span-1' : ''
+                  }`}
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
                 {/* Project Image */}
                 <div className="relative overflow-hidden bg-gradient-to-br from-primary/20 to-blue-400/20 h-48">
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                  
+                  <img
+                    src={project.image}
+                    alt={project.title}
+                    className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                  />
+
+
                   {/* Featured Badge */}
                   {project.featured && (
                     <div className="absolute top-4 right-4 bg-primary text-primary-foreground px-3 py-1 rounded-full text-sm font-semibold">
@@ -166,7 +169,7 @@ const Projects = () => {
                   <h3 className="text-xl font-bold text-foreground mb-3 group-hover:text-primary transition-colors duration-200">
                     {project.title}
                   </h3>
-                  
+
                   <p className="text-muted-foreground mb-4 leading-relaxed">
                     {project.description}
                   </p>

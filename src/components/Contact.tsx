@@ -50,13 +50,13 @@ const Contact = () => {
     {
       icon: FaGithub ,
       name: 'GitHub',
-      link: 'https://github.com',
+      link: 'https://github.com/Maram147',
       color: 'hover:text-gray-600'
     },
     {
       icon: FaLinkedin,
       name: 'LinkedIn',
-      link: 'https://linkedin.com/Maram147',
+      link: 'https://linkedin.com/devmaraam',
       color: 'hover:text-blue-600'
     },
     {
