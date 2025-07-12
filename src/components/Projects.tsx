@@ -1,6 +1,7 @@
 
 import React, { useState } from 'react';
-import { ExternalLink, Github, Eye } from 'lucide-react';
+import { ExternalLink, Eye } from 'lucide-react';
+import { FaGithub } from "react-icons/fa";
 
 const Projects = () => {
   const [activeFilter, setActiveFilter] = useState('all');
@@ -9,57 +10,35 @@ const Projects = () => {
     {
       id: 1,
       title: 'Dwayee',
-      description: 'منصة تجارة إلكترونية مطورة بـ React و Node.js مع نظام دفع آمن وإدارة المخزون',
+      description: 'Dwayee - دوائي is a smart, pharmacy-focused platform designed to revolutionize the way users search for and order medications.',
       image: '/Dwayee.png',
-      technologies: ['React', 'Node.js', 'MongoDB', 'Stripe'],
+      technologies: ['React', 'Tailwind', 'My SQL', 'Laravel'],
       category: 'Front-End',
-      demoLink: '#',
-      githubLink: '#',
+      demoLink: 'https://dwayee-1.vercel.app/',
+      githubLink: 'https://github.com/Maram147/Dwayee',
       featured: true
     },
     {
       id: 2,
       title: 'Fresh-Cart',
-      description: 'تطبيق ويب لإدارة المهام والمشاريع مع واجهة سهلة الاستخدام وإشعارات فورية',
+      description:'The Fresh Cart Ecommerce is a modern web application designed to simplify the process of browsing, purchasing, and managing products.',
       image: '/assets/images/Fresh-Cart.png',
-      technologies: ['Vue.js', 'Express', 'Socket.io'],
+      technologies: ['React', 'Tailwind', 'My SQL', 'Laravel'],
       category: 'Front-End',
-      demoLink: '#',
-      githubLink: '#',
+      demoLink: 'https://fresh-cart-five-murex.vercel.app/',
+      githubLink: 'https://github.com/Maram147/Fresh-Cart',
       featured: false
     },
     {
       id: 3,
       title: 'Recipe-App',
-      description: 'CMS مخصص للمدونات والمواقع الإخبارية مع محرر نصوص متقدم',
+      description: 'A React web app that helps users discover meals by category, origin, and ingredients',
       image: '/assets/images/Recipe-App.png',
-      technologies: ['React', 'GraphQL', 'PostgreSQL'],
-      category: 'fullstack',
-      demoLink: '#',
-      githubLink: '#',
-      featured: true
-    },
-    {
-      id: 4,
-      title: 'موقع شركة تقنية',
-      description: 'موقع تسويقي احترافي لشركة تقنية مع تصميم responsive وأداء متميز',
-      image: '/placeholder.svg',
-      technologies: ['HTML', 'CSS', 'JavaScript', 'GSAP'],
+      technologies: ['React', 'Tailwind','SASS', 'My SQL', 'Laravel'],
       category: 'Front-End',
-      demoLink: '#',
-      githubLink: '#',
-      featured: false
-    },
-    {
-      id: 5,
-      title: 'API للطقس',
-      description: 'RESTful API لبيانات الطقس مع documentation شامل وأداء عالي',
-      image: '/placeholder.svg',
-      technologies: ['Node.js', 'Express', 'Redis', 'Swagger'],
-      category: 'backend',
-      demoLink: '#',
-      githubLink: '#',
-      featured: false
+      demoLink: 'https://recipe-app-three-jade.vercel.app/',
+      githubLink: 'https://github.com/Maram147/Recipe-app',
+      featured: true
     },
     {
       id: 6,
@@ -75,7 +54,7 @@ const Projects = () => {
   ];
 
   const filters = [
-    { id: 'all', label: 'جميع المشاريع' },
+    { id: 'all', label: 'All Projects' },
     { id: 'fullstack', label: 'Full Stack' },
     { id: 'Front-End', label: 'Front-End' },
     { id: 'backend', label: 'Backend' }
@@ -92,11 +71,11 @@ const Projects = () => {
           {/* Section Header */}
           <div className="text-center mb-16 animate-fade-in">
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-              أحدث <span className="text-gradient">المشاريع</span>
+            <span className="text-gradient">Projects</span>
             </h2>
             <div className="w-20 h-1 bg-primary mx-auto mb-8"></div>
             <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-              مجموعة مختارة من أفضل المشاريع التي عملت عليها مؤخراً
+              A selection of the best projects I've worked on recently.
             </p>
           </div>
 
@@ -153,7 +132,7 @@ const Projects = () => {
                       href={project.githubLink}
                       className="p-3 bg-white/20 backdrop-blur-sm rounded-full hover:bg-primary/80 transition-colors duration-200"
                     >
-                      <Github className="h-5 w-5 text-white" />
+                      <FaGithub className="h-5 w-5 text-white" />
                     </a>
                     <a
                       href={project.demoLink}
@@ -193,14 +172,14 @@ const Projects = () => {
                       className="flex items-center gap-2 text-primary hover:text-primary/80 font-medium transition-colors duration-200"
                     >
                       <ExternalLink className="h-4 w-4" />
-                      عرض المشروع
+                      View Project
                     </a>
                     <a
                       href={project.githubLink}
                       className="flex items-center gap-2 text-muted-foreground hover:text-foreground font-medium transition-colors duration-200"
                     >
-                      <Github className="h-4 w-4" />
-                      الكود
+                      <FaGithub className="h-4 w-4" />
+                     Code
                     </a>
                   </div>
                 </div>
@@ -212,13 +191,13 @@ const Projects = () => {
           <div className="text-center mt-16 animate-fade-in">
             <div className="bg-gradient-to-r from-primary/10 to-blue-400/10 rounded-xl p-8 border border-primary/20">
               <h3 className="text-2xl font-bold text-foreground mb-4">
-                هل لديك مشروع في ذهنك؟
+                Do you have a project in mind?
               </h3>
               <p className="text-muted-foreground text-lg mb-6">
-                دعنا نتحدث حول كيف يمكنني مساعدتك في تحويل فكرتك إلى واقع رقمي
+                Let's talk about how I can help you turn your idea into a digital reality.
               </p>
               <button className="bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-4 rounded-full font-semibold transition-all duration-200 hover:scale-105">
-                تواصل معي الآن
+                Contact me now 
               </button>
             </div>
           </div>
