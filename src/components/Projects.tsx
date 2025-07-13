@@ -40,17 +40,6 @@ const Projects = () => {
       githubLink: 'https://github.com/Maram147/Recipe-app',
       featured: true
     },
-    {
-      id: 6,
-      title: 'لوحة تحكم إحصائيات',
-      description: 'dashboard تفاعلي لعرض الإحصائيات والبيانات مع charts ديناميكية',
-      image: '/placeholder.svg',
-      technologies: ['React', 'D3.js', 'Chart.js'],
-      category: 'Front-End',
-      demoLink: '#',
-      githubLink: '#',
-      featured: true
-    }
   ];
 
   const filters = [
