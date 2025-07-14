@@ -5,36 +5,6 @@ import { Calendar, MapPin, Building } from 'lucide-react';
 const Experience = () => {
   const experiences = [
     {
-      id: 1,
-      position: 'Senior Full Stack Developer',
-      company: 'شركة التقنيات المتقدمة',
-      location: 'الرياض، السعودية',
-      duration: '2022 - الآن',
-      description: [
-        'قيادة فريق من 5 مطورين في تطوير تطبيقات ويب متقدمة',
-        'تطوير وصيانة أكثر من 10 مشاريع للعملاء الكبار',
-        'تحسين أداء التطبيقات بنسبة 40% باستخدام تقنيات التحسين الحديثة',
-        'تدريب المطورين الجدد على أفضل الممارسات في البرمجة'
-      ],
-      technologies: ['React', 'Node.js', 'TypeScript', 'AWS', 'Docker'],
-      current: true
-    },
-    {
-      id: 2,
-      position: 'Frontend Developer',
-      company: 'وكالة الإبداع الرقمي',
-      location: 'دبي، الإمارات',
-      duration: '2021 - 2022',
-      description: [
-        'تطوير واجهات مستخدم تفاعلية لأكثر من 15 موقع ويب',
-        'العمل مع فرق التصميم لتحويل التصاميم إلى كود فعال',
-        'تحسين تجربة المستخدم وزيادة معدلات التحويل بنسبة 25%',
-        'إنشاء مكتبة مكونات قابلة لإعادة الاستخدام'
-      ],
-      technologies: ['Vue.js', 'Sass', 'JavaScript', 'Figma', 'Git'],
-      current: false
-    },
-    {
       id: 3,
       position: 'Junior Web Developer',
       company: 'شركة الحلول الذكية',
