@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from 'react';
 import { Moon, Sun, Menu, X } from 'lucide-react';
 import { useTheme } from './ThemeProvider';
-
+import { Palette } from 'lucide-react';
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -45,8 +45,8 @@ const Header = () => {
       <div className="container mx-auto px-4 py-4">
         <nav className="flex items-center justify-between">
           {/* Logo */}
-          <div className="text-2xl font-bold text-gradient">
-            Portfolio
+          <div className="text-2xl font-bold text-gradient flex items-center space-x-5 gap-2">
+            <Palette color='White' />  Maram 
           </div>
 
           {/* Desktop Navigation */}

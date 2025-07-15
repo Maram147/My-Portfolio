@@ -1,22 +1,21 @@
-
 import React from 'react';
 import { Calendar, MapPin, Building } from 'lucide-react';
 
 const Experience = () => {
   const experiences = [
     {
-      id: 3,
-      position: 'Junior Web Developer',
-      company: 'شركة الحلول الذكية',
-      location: 'القاهرة، مصر',
-      duration: '2020 - 2021',
+      id: 1,
+      position: 'Web Development Intern (WordPress)',
+      company: 'NetArabia',
+      location: 'Qena, Egypt',
+      duration: 'Sep 2024',
       description: [
-        'تطوير وصيانة مواقع الويب للشركات الصغيرة والمتوسطة',
-        'العمل على تحسين أداء وسرعة المواقع الإلكترونية',
-        'تعلم وتطبيق أحدث تقنيات تطوير الويب',
-        'المشاركة في جميع مراحل دورة تطوير البرمجيات'
+        'Developed an e-commerce website using WordPress and Laragon.',
+        'Improved user interface and experience design.',
+        'Tested and enhanced website performance.',
+        'Participated in the full software development cycle.'
       ],
-      technologies: ['HTML', 'CSS', 'JavaScript', 'PHP', 'MySQL'],
+      technologies: ['WordPress', 'HTML', 'CSS', 'PHP', 'MySQL'],
       current: false
     }
   ];
@@ -24,69 +23,76 @@ const Experience = () => {
   const education = [
     {
       id: 1,
-      degree: 'بكالوريوس علوم الحاسوب',
-      institution: 'جامعة الملك سعود',
-      location: 'الرياض، السعودية',
-      duration: '2016 - 2020',
-      gpa: '3.8/4.0',
-      description: 'تخصص في هندسة البرمجيات وقواعد البيانات'
+      degree: 'Bachelor of Computer Science',
+      institution: 'South Valley National University',
+      location: 'Qena, Egypt',
+      duration: '2022 - Present',
+      gpa: null,
+      description: 'Senior year student at the Faculty of Computers and Artificial Intelligence – Computer Science Major'
     },
     {
       id: 2,
-      degree: 'شهادة React Developer المتقدمة',
-      institution: 'Meta (Facebook)',
-      location: 'أونلاين',
-      duration: '2021',
-      gpa: null,
-      description: 'برنامج تدريبي شامل في تطوير تطبيقات React'
+      degree: 'Frontend Developer Diploma',
+      institution: 'Route Academy',
+      location: 'Online',
+      duration: 'Sep 2024 – Feb 2025',
+      description: 'Comprehensive diploma focusing on React.js, JavaScript, and Tailwind CSS for modern web development'
+    },
+    {
+      id: 3,
+      degree: 'Software Engineering Fundamentals',
+      institution: 'ITI – Information Technology Institute',
+      location: 'Online',
+      duration: '2024',
+      description: 'Covered the basics of software development lifecycle, clean code, and modern tools'
     }
+  ];
+
+  const certifications = [
+    'ICPC – ECPC Finalist (2023 – 2024)',
+    'Mentor in ICPC Community at South Valley University',
+    'HR Head at Google Developer Student Club – SVU',
+    'Web Developer Intern – NetArabia',
+    'Frontend Developer Diploma – Route Academy',
+    'Software Engineering Certificate – ITI'
   ];
 
   return (
     <section id="experience" className="py-20">
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto">
-          {/* Section Header */}
+          {/* Header */}
           <div className="text-center mb-16 animate-fade-in">
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-              الخبرة <span className="text-gradient">المهنية</span>
+              Work <span className="text-gradient">Experience</span>
             </h2>
             <div className="w-20 h-1 bg-primary mx-auto mb-8"></div>
             <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-              رحلتي المهنية في عالم تطوير البرمجيات والتقنيات الحديثة
+              My journey through internships, development roles, and technical contributions.
             </p>
           </div>
 
           <div className="grid lg:grid-cols-2 gap-12">
-            {/* Work Experience */}
+            {/* Experience Section */}
             <div className="animate-slide-up">
               <h3 className="text-2xl font-bold text-foreground mb-8 flex items-center gap-3">
                 <Building className="h-6 w-6 text-primary" />
-                الخبرة العملية
+                Professional Experience
               </h3>
 
               <div className="space-y-8">
-                {experiences.map((exp, index) => (
+                {experiences.map((exp) => (
                   <div 
                     key={exp.id}
                     className="relative bg-card rounded-xl p-6 border border-border hover:shadow-lg transition-all duration-300"
                   >
-                    {/* Timeline Dot */}
                     <div className="absolute -right-3 top-8 w-6 h-6 bg-primary rounded-full border-4 border-background"></div>
-                    
-                    {/* Current Job Indicator */}
-                    {exp.current && (
-                      <div className="absolute top-4 left-4 bg-green-500 text-white px-3 py-1 rounded-full text-sm font-semibold">
-                        حالياً
-                      </div>
-                    )}
 
                     <div className="space-y-4">
                       <div>
                         <h4 className="text-xl font-bold text-foreground mb-2">
                           {exp.position}
                         </h4>
-                        
                         <div className="flex flex-wrap gap-4 text-muted-foreground mb-4">
                           <div className="flex items-center gap-2">
                             <Building className="h-4 w-4" />
@@ -104,8 +110,8 @@ const Experience = () => {
                       </div>
 
                       <ul className="space-y-2">
-                        {exp.description.map((item, itemIndex) => (
-                          <li key={itemIndex} className="flex items-start gap-3 text-muted-foreground">
+                        {exp.description.map((item, index) => (
+                          <li key={index} className="flex items-start gap-3 text-muted-foreground">
                             <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></div>
                             <span>{item}</span>
                           </li>
@@ -113,9 +119,9 @@ const Experience = () => {
                       </ul>
 
                       <div className="flex flex-wrap gap-2">
-                        {exp.technologies.map((tech, techIndex) => (
+                        {exp.technologies.map((tech, index) => (
                           <span
-                            key={techIndex}
+                            key={index}
                             className="px-3 py-1 bg-primary/10 text-primary rounded-full text-sm font-medium"
                           >
                             {tech}
@@ -128,28 +134,26 @@ const Experience = () => {
               </div>
             </div>
 
-            {/* Education */}
+            {/* Education Section */}
             <div className="animate-slide-up" style={{ animationDelay: '0.2s' }}>
               <h3 className="text-2xl font-bold text-foreground mb-8 flex items-center gap-3">
                 <Calendar className="h-6 w-6 text-primary" />
-                التعليم والشهادات
+                Education & Certificates
               </h3>
 
               <div className="space-y-8">
-                {education.map((edu, index) => (
+                {education.map((edu) => (
                   <div 
                     key={edu.id}
                     className="relative bg-card rounded-xl p-6 border border-border hover:shadow-lg transition-all duration-300"
                   >
-                    {/* Timeline Dot */}
                     <div className="absolute -right-3 top-8 w-6 h-6 bg-blue-500 rounded-full border-4 border-background"></div>
-                    
+
                     <div className="space-y-4">
                       <div>
                         <h4 className="text-xl font-bold text-foreground mb-2">
                           {edu.degree}
                         </h4>
-                        
                         <div className="flex flex-wrap gap-4 text-muted-foreground mb-4">
                           <div className="flex items-center gap-2">
                             <Building className="h-4 w-4" />
@@ -164,14 +168,6 @@ const Experience = () => {
                             <span>{edu.duration}</span>
                           </div>
                         </div>
-
-                        {edu.gpa && (
-                          <div className="mb-3">
-                            <span className="bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200 px-3 py-1 rounded-full text-sm font-semibold">
-                              المعدل: {edu.gpa}
-                            </span>
-                          </div>
-                        )}
                       </div>
 
                       <p className="text-muted-foreground">{edu.description}</p>
@@ -183,13 +179,12 @@ const Experience = () => {
               {/* Certifications */}
               <div className="mt-12 bg-gradient-to-r from-primary/10 to-blue-400/10 rounded-xl p-6 border border-primary/20">
                 <h4 className="text-lg font-bold text-foreground mb-4">
-                  شهادات إضافية
+                  Certifications & Achievements
                 </h4>
                 <div className="space-y-2 text-muted-foreground">
-                  <div>• AWS Certified Solutions Architect</div>
-                  <div>• Google Analytics Certified</div>
-                  <div>• Scrum Master Certification</div>
-                  <div>• MongoDB Developer Certification</div>
+                  {certifications.map((cert, index) => (
+                    <div key={index}>• {cert}</div>
+                  ))}
                 </div>
               </div>
             </div>

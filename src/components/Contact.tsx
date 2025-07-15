@@ -1,6 +1,5 @@
-
 import React, { useState } from 'react';
-import { Mail, Phone, MapPin, Send,  Twitter } from 'lucide-react';
+import { Mail, Phone, MapPin, Send, Twitter } from 'lucide-react';
 import { FaGithub } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa";
 
@@ -41,14 +40,14 @@ const Contact = () => {
     {
       icon: MapPin,
       title: 'Location',
-      value: 'Egypt,Qena',
+      value: 'Qena, Egypt',
       link: null
     }
   ];
 
   const socialLinks = [
     {
-      icon: FaGithub ,
+      icon: FaGithub,
       name: 'GitHub',
       link: 'https://github.com/Maram147',
       color: 'hover:text-gray-600'
@@ -56,7 +55,7 @@ const Contact = () => {
     {
       icon: FaLinkedin,
       name: 'LinkedIn',
-      link: 'https://linkedin.com/devmaraam',
+      link: 'https://linkedin.com/in/devmaraam',
       color: 'hover:text-blue-600'
     },
     {
@@ -74,11 +73,11 @@ const Contact = () => {
           {/* Section Header */}
           <div className="text-center mb-16 animate-fade-in">
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-              تواصل <span className="text-gradient">معي</span>
+              Get in <span className="text-gradient">Touch</span>
             </h2>
             <div className="w-20 h-1 bg-primary mx-auto mb-8"></div>
             <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-              هل لديك مشروع مثير أو فرصة عمل؟ أحب أن أسمع منك!
+              Have a project in mind or a job opportunity? I'd love to hear from you!
             </p>
           </div>
 
@@ -86,15 +85,13 @@ const Contact = () => {
             {/* Contact Information */}
             <div className="animate-slide-up">
               <h3 className="text-2xl font-bold text-foreground mb-8">
-                دعنا نتحدث
+                Let's Talk
               </h3>
-              
-              
 
               {/* Contact Cards */}
               <div className="space-y-4 mb-8">
                 {contactInfo.map((info, index) => (
-                  <div 
+                  <div
                     key={index}
                     className="flex items-center gap-4 p-4 bg-card rounded-lg border border-border hover:shadow-md transition-all duration-200"
                   >
@@ -106,7 +103,7 @@ const Contact = () => {
                         {info.title}
                       </h4>
                       {info.link ? (
-                        <a 
+                        <a
                           href={info.link}
                           className="text-muted-foreground hover:text-primary transition-colors duration-200"
                         >
@@ -122,7 +119,7 @@ const Contact = () => {
 
               {/* Social Links */}
               <div>
-                <h4 className="font-semibold text-foreground mb-4">Follow me </h4>
+                <h4 className="font-semibold text-foreground mb-4">Follow Me</h4>
                 <div className="flex gap-4">
                   {socialLinks.map((social, index) => (
                     <a
@@ -144,14 +141,14 @@ const Contact = () => {
             <div className="animate-slide-up" style={{ animationDelay: '0.2s' }}>
               <div className="bg-card rounded-xl p-8 border border-border shadow-lg">
                 <h3 className="text-2xl font-bold text-foreground mb-6">
-                  Sent Message
+                  Send a Message
                 </h3>
 
                 <form onSubmit={handleSubmit} className="space-y-6">
                   <div className="grid md:grid-cols-2 gap-4">
                     <div>
                       <label htmlFor="name" className="block text-sm font-medium text-foreground mb-2">
-                       Name
+                        Name
                       </label>
                       <input
                         type="text"
@@ -164,7 +161,7 @@ const Contact = () => {
                         placeholder="Full Name"
                       />
                     </div>
-                    
+
                     <div>
                       <label htmlFor="email" className="block text-sm font-medium text-foreground mb-2">
                         Email
@@ -210,7 +207,7 @@ const Contact = () => {
                       onChange={handleInputChange}
                       required
                       className="w-full px-4 py-3 bg-background border border-border rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition-all duration-200 resize-none"
-                      placeholder="Write Message...."
+                      placeholder="Write your message..."
                     ></textarea>
                   </div>
 
@@ -219,7 +216,7 @@ const Contact = () => {
                     className="w-full bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-4 rounded-lg font-semibold transition-all duration-200 hover:scale-105 flex items-center justify-center gap-2"
                   >
                     <Send className="h-5 w-5" />
-                    Sent
+                    Send
                   </button>
                 </form>
               </div>
@@ -230,10 +227,10 @@ const Contact = () => {
           <div className="mt-16 text-center animate-fade-in">
             <div className="bg-gradient-to-r from-primary/10 to-blue-400/10 rounded-xl p-8 border border-primary/20">
               <h3 className="text-2xl font-bold text-foreground mb-4">
-                مستعد لبدء مشروعك القادم؟
+                Ready to start your next project?
               </h3>
               <p className="text-muted-foreground text-lg mb-6">
-                دعنا نحول أفكارك إلى واقع رقمي مذهل
+                Let's turn your ideas into a stunning digital experience.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a
@@ -241,14 +238,14 @@ const Contact = () => {
                   className="bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-4 rounded-full font-semibold transition-all duration-200 hover:scale-105 inline-flex items-center justify-center gap-2"
                 >
                   <Mail className="h-5 w-5" />
-                  راسلني الآن
+                  Contact Me
                 </a>
                 <a
-                  href="tel:+966501234567"
+                  href="tel:+201021579696"
                   className="border border-primary text-primary hover:bg-primary/10 px-8 py-4 rounded-full font-semibold transition-all duration-200 hover:scale-105 inline-flex items-center justify-center gap-2"
                 >
                   <Phone className="h-5 w-5" />
-                  Contact me
+                  Call Now
                 </a>
               </div>
             </div>
