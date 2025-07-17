@@ -1,7 +1,22 @@
-
 import React, { useState } from 'react';
 import { ExternalLink, Eye } from 'lucide-react';
 import { FaGithub } from "react-icons/fa";
+import { motion ,Variants } from 'framer-motion';
+
+const fadeInUp: Variants = {
+  hidden: {
+    opacity: 0,
+    y: 50,
+  },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.6,
+      ease: "easeOut", 
+    },
+  },
+};
 
 const Projects = () => {
   const [activeFilter, setActiveFilter] = useState('all');
@@ -57,19 +72,33 @@ const Projects = () => {
     <section id="projects" className="py-20 bg-secondary/30">
       <div className="container mx-auto px-4">
         <div className="max-w-7xl mx-auto">
+          
           {/* Section Header */}
-          <div className="text-center mb-16 animate-fade-in">
+          <motion.div
+            className="text-center mb-16"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            variants={fadeInUp}
+          >
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-            <span className="text-gradient">Projects</span>
+              <span className="text-gradient">Projects</span>
             </h2>
             <div className="w-20 h-1 bg-primary mx-auto mb-8"></div>
             <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
               A selection of the best projects I've worked on recently.
             </p>
-          </div>
+          </motion.div>
 
           {/* Filter Buttons */}
-          <div className="flex flex-wrap justify-center gap-4 mb-12">
+          <motion.div
+            className="flex flex-wrap justify-center gap-4 mb-12"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            variants={fadeInUp}
+            custom={1}
+          >
             {filters.map((filter) => (
               <button
                 key={filter.id}
@@ -82,16 +111,19 @@ const Projects = () => {
                 {filter.label}
               </button>
             ))}
-          </div>
+          </motion.div>
 
           {/* Projects Grid */}
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {filteredProjects.map((project, index) => (
-              <div
+              <motion.div
                 key={project.id}
-                className={`group relative bg-card rounded-xl overflow-hidden border border-border hover:shadow-2xl transition-all duration-500 hover:scale-105 animate-slide-up ${project.featured ? 'md:col-span-2 lg:col-span-1' : ''
-                  }`}
-                style={{ animationDelay: `${index * 0.1}s` }}
+                className={`group relative bg-card rounded-xl overflow-hidden border border-border hover:shadow-2xl transition-all duration-500 hover:scale-105 ${project.featured ? 'md:col-span-2 lg:col-span-1' : ''}`}
+                custom={index}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true }}
+                variants={fadeInUp}
               >
                 {/* Project Image */}
                 <div className="relative overflow-hidden bg-gradient-to-br from-primary/20 to-blue-400/20 h-48">
@@ -101,32 +133,22 @@ const Projects = () => {
                     className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                   />
 
-
                   {/* Featured Badge */}
                   {project.featured && (
                     <div className="absolute top-4 right-4 bg-primary text-primary-foreground px-3 py-1 rounded-full text-sm font-semibold">
-                      مميز
+                      Featured
                     </div>
                   )}
 
                   {/* Hover Actions */}
                   <div className="absolute inset-0 flex items-center justify-center gap-4 opacity-0 group-hover:opacity-100 transition-all duration-300">
-                    <a
-                      href={project.demoLink}
-                      className="p-3 bg-white/20 backdrop-blur-sm rounded-full hover:bg-primary/80 transition-colors duration-200"
-                    >
+                    <a href={project.demoLink} className="p-3 bg-white/20 backdrop-blur-sm rounded-full hover:bg-primary/80 transition-colors duration-200">
                       <Eye className="h-5 w-5 text-white" />
                     </a>
-                    <a
-                      href={project.githubLink}
-                      className="p-3 bg-white/20 backdrop-blur-sm rounded-full hover:bg-primary/80 transition-colors duration-200"
-                    >
+                    <a href={project.githubLink} className="p-3 bg-white/20 backdrop-blur-sm rounded-full hover:bg-primary/80 transition-colors duration-200">
                       <FaGithub className="h-5 w-5 text-white" />
                     </a>
-                    <a
-                      href={project.demoLink}
-                      className="p-3 bg-white/20 backdrop-blur-sm rounded-full hover:bg-primary/80 transition-colors duration-200"
-                    >
+                    <a href={project.demoLink} className="p-3 bg-white/20 backdrop-blur-sm rounded-full hover:bg-primary/80 transition-colors duration-200">
                       <ExternalLink className="h-5 w-5 text-white" />
                     </a>
                   </div>
@@ -137,7 +159,6 @@ const Projects = () => {
                   <h3 className="text-xl font-bold text-foreground mb-3 group-hover:text-primary transition-colors duration-200">
                     {project.title}
                   </h3>
-
                   <p className="text-muted-foreground mb-4 leading-relaxed">
                     {project.description}
                   </p>
@@ -145,10 +166,7 @@ const Projects = () => {
                   {/* Technologies */}
                   <div className="flex flex-wrap gap-2 mb-4">
                     {project.technologies.map((tech, techIndex) => (
-                      <span
-                        key={techIndex}
-                        className="px-3 py-1 bg-primary/10 text-primary rounded-full text-sm font-medium"
-                      >
+                      <span key={techIndex} className="px-3 py-1 bg-primary/10 text-primary rounded-full text-sm font-medium">
                         {tech}
                       </span>
                     ))}
@@ -156,28 +174,29 @@ const Projects = () => {
 
                   {/* Action Links */}
                   <div className="flex gap-4">
-                    <a
-                      href={project.demoLink}
-                      className="flex items-center gap-2 text-primary hover:text-primary/80 font-medium transition-colors duration-200"
-                    >
+                    <a href={project.demoLink} className="flex items-center gap-2 text-primary hover:text-primary/80 font-medium transition-colors duration-200">
                       <ExternalLink className="h-4 w-4" />
                       View Project
                     </a>
-                    <a
-                      href={project.githubLink}
-                      className="flex items-center gap-2 text-muted-foreground hover:text-foreground font-medium transition-colors duration-200"
-                    >
+                    <a href={project.githubLink} className="flex items-center gap-2 text-muted-foreground hover:text-foreground font-medium transition-colors duration-200">
                       <FaGithub className="h-4 w-4" />
-                     Code
+                      Code
                     </a>
                   </div>
                 </div>
-              </div>
+              </motion.div>
             ))}
           </div>
 
           {/* CTA Section */}
-          <div className="text-center mt-16 animate-fade-in">
+          <motion.div
+            className="text-center mt-16"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            variants={fadeInUp}
+            custom={4}
+          >
             <div className="bg-gradient-to-r from-primary/10 to-blue-400/10 rounded-xl p-8 border border-primary/20">
               <h3 className="text-2xl font-bold text-foreground mb-4">
                 Do you have a project in mind?
@@ -186,10 +205,10 @@ const Projects = () => {
                 Let's talk about how I can help you turn your idea into a digital reality.
               </p>
               <button className="bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-4 rounded-full font-semibold transition-all duration-200 hover:scale-105">
-                Contact me now 
+                Contact me now
               </button>
             </div>
-          </div>
+          </motion.div>
         </div>
       </div>
     </section>

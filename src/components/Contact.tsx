@@ -1,5 +1,7 @@
-import React, { useState } from 'react';
-import { Mail, Phone, MapPin, Send, Twitter } from 'lucide-react';
+import React, { useState, useEffect } from 'react';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+import { Mail, Phone, MapPin, Send } from 'lucide-react';
 import { FaGithub } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa";
 
@@ -10,6 +12,10 @@ const Contact = () => {
     subject: '',
     message: ''
   });
+
+  useEffect(() => {
+    AOS.init({ once: true, duration: 1000 });
+  }, []);
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
@@ -70,8 +76,7 @@ const Contact = () => {
     <section id="contact" className="py-20 bg-secondary/30">
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto">
-          {/* Section Header */}
-          <div className="text-center mb-16 animate-fade-in">
+          <div className="text-center mb-16" data-aos="fade-up">
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
               Get in <span className="text-gradient">Touch</span>
             </h2>
@@ -82,31 +87,18 @@ const Contact = () => {
           </div>
 
           <div className="grid lg:grid-cols-2 gap-12">
-            {/* Contact Information */}
-            <div className="animate-slide-up">
-              <h3 className="text-2xl font-bold text-foreground mb-8">
-                Let's Talk
-              </h3>
-
-              {/* Contact Cards */}
+            <div data-aos="fade-right">
+              <h3 className="text-2xl font-bold text-foreground mb-8">Let's Talk</h3>
               <div className="space-y-4 mb-8">
                 {contactInfo.map((info, index) => (
-                  <div
-                    key={index}
-                    className="flex items-center gap-4 p-4 bg-card rounded-lg border border-border hover:shadow-md transition-all duration-200"
-                  >
+                  <div key={index} className="flex items-center gap-4 p-4 bg-card rounded-lg border border-border hover:shadow-md transition-all duration-200">
                     <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center">
                       <info.icon className="h-6 w-6 text-primary" />
                     </div>
                     <div>
-                      <h4 className="font-semibold text-foreground mb-1">
-                        {info.title}
-                      </h4>
+                      <h4 className="font-semibold text-foreground mb-1">{info.title}</h4>
                       {info.link ? (
-                        <a
-                          href={info.link}
-                          className="text-muted-foreground hover:text-primary transition-colors duration-200"
-                        >
+                        <a href={info.link} className="text-muted-foreground hover:text-primary transition-colors duration-200">
                           {info.value}
                         </a>
                       ) : (
@@ -117,7 +109,6 @@ const Contact = () => {
                 ))}
               </div>
 
-              {/* Social Links */}
               <div>
                 <h4 className="font-semibold text-foreground mb-4">Follow Me</h4>
                 <div className="flex gap-4">
@@ -137,19 +128,13 @@ const Contact = () => {
               </div>
             </div>
 
-            {/* Contact Form */}
-            <div className="animate-slide-up" style={{ animationDelay: '0.2s' }}>
+            <div data-aos="fade-left" data-aos-delay="200">
               <div className="bg-card rounded-xl p-8 border border-border shadow-lg">
-                <h3 className="text-2xl font-bold text-foreground mb-6">
-                  Send a Message
-                </h3>
-
+                <h3 className="text-2xl font-bold text-foreground mb-6">Send a Message</h3>
                 <form onSubmit={handleSubmit} className="space-y-6">
                   <div className="grid md:grid-cols-2 gap-4">
                     <div>
-                      <label htmlFor="name" className="block text-sm font-medium text-foreground mb-2">
-                        Name
-                      </label>
+                      <label htmlFor="name" className="block text-sm font-medium text-foreground mb-2">Name</label>
                       <input
                         type="text"
                         id="name"
@@ -161,11 +146,8 @@ const Contact = () => {
                         placeholder="Full Name"
                       />
                     </div>
-
                     <div>
-                      <label htmlFor="email" className="block text-sm font-medium text-foreground mb-2">
-                        Email
-                      </label>
+                      <label htmlFor="email" className="block text-sm font-medium text-foreground mb-2">Email</label>
                       <input
                         type="email"
                         id="email"
@@ -180,9 +162,7 @@ const Contact = () => {
                   </div>
 
                   <div>
-                    <label htmlFor="subject" className="block text-sm font-medium text-foreground mb-2">
-                      Subject
-                    </label>
+                    <label htmlFor="subject" className="block text-sm font-medium text-foreground mb-2">Subject</label>
                     <input
                       type="text"
                       id="subject"
@@ -196,9 +176,7 @@ const Contact = () => {
                   </div>
 
                   <div>
-                    <label htmlFor="message" className="block text-sm font-medium text-foreground mb-2">
-                      Message
-                    </label>
+                    <label htmlFor="message" className="block text-sm font-medium text-foreground mb-2">Message</label>
                     <textarea
                       id="message"
                       name="message"
@@ -223,12 +201,9 @@ const Contact = () => {
             </div>
           </div>
 
-          {/* Call to Action */}
-          <div className="mt-16 text-center animate-fade-in">
+          <div className="mt-16 text-center" data-aos="zoom-in">
             <div className="bg-gradient-to-r from-primary/10 to-blue-400/10 rounded-xl p-8 border border-primary/20">
-              <h3 className="text-2xl font-bold text-foreground mb-4">
-                Ready to start your next project?
-              </h3>
+              <h3 className="text-2xl font-bold text-foreground mb-4">Ready to start your next project?</h3>
               <p className="text-muted-foreground text-lg mb-6">
                 Let's turn your ideas into a stunning digital experience.
               </p>

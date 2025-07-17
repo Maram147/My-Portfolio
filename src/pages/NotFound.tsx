@@ -13,10 +13,9 @@ const NotFound = () => {
 
   return (
     <div className="min-h-screen flex items-center justify-center bg-gray-100">
-      <div className="text-center">
-        <h1 className="text-4xl font-bold mb-4">404</h1>
-        <p className="text-xl text-gray-600 mb-4">Oops! Page not found</p>
-        <a href="/" className="text-blue-500 hover:text-blue-700 underline">
+      <div className="text-center w-full max-w-md p-6 bg-white rounded-lg shadow-lg shadow-orange-200">
+        <img src="/public/assets/images/404 error with a tired person-pana.svg" alt="Error" />
+        <a href="/" className="text-orange-300 hover:text-orange-500 mt-4 inline-block text-lg font-semibold">
           Return to Home
         </a>
       </div>

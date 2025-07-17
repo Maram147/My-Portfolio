@@ -1,8 +1,13 @@
-
-import React from 'react';
+import React, { useEffect } from 'react';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 import { Code, Palette, Database, Globe } from 'lucide-react';
 
 const About = () => {
+  useEffect(() => {
+    AOS.init({ duration: 1000, once: true });
+  }, []);
+
   const highlights = [
     {
       icon: Code,
@@ -31,7 +36,7 @@ const About = () => {
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto">
           {/* Section Header */}
-          <div className="text-center mb-16 animate-fade-in">
+          <div className="text-center mb-16" data-aos="fade-up">
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
               About <span className="text-gradient">Me</span>
             </h2>
@@ -40,25 +45,26 @@ const About = () => {
 
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             {/* Text Content */}
-            <div className="animate-slide-up">
+            <div data-aos="fade-right" data-aos-delay="100">
               <h3 className="text-2xl font-bold text-foreground mb-6">
                 Passionate and Creative Developer
               </h3>
-              
+
               <div className="space-y-4 text-muted-foreground text-lg leading-relaxed">
                 <p>
                   My name is Maram Mahmoud, a fourth-year student at South Valley National University, Faculty of Computers and Artificial Intelligence. I participated in the ICPC competition for two consecutive years and served as a mentor in the university's ICPC community, where I taught problem solving and C++. I also completed an internship at NetArabia and finished the Route Frontend Diploma.
                 </p>
-                
-              </div>              
+              </div>
             </div>
 
             {/* Highlights Grid */}
-            <div className="grid md:grid-cols-2 gap-6 animate-slide-up">
+            <div className="grid md:grid-cols-2 gap-6" data-aos="fade-left" data-aos-delay="200">
               {highlights.map((highlight, index) => (
-                <div 
+                <div
                   key={index}
                   className="p-6 bg-card rounded-xl border border-border hover:shadow-lg transition-all duration-300 hover:scale-105"
+                  data-aos="zoom-in"
+                  data-aos-delay={300 + index * 100}
                 >
                   <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
                     <highlight.icon className="h-6 w-6 text-primary" />

@@ -1,7 +1,15 @@
 import React from 'react';
 import { Calendar, MapPin, Building } from 'lucide-react';
+import { ExternalLink } from 'lucide-react';
+import 'aos/dist/aos.css';
+import AOS from 'aos';
+import { useEffect } from 'react';
 
 const Experience = () => {
+  useEffect(() => {
+    AOS.init({ duration: 1000, once: true });
+  }, []);
+
   const experiences = [
     {
       id: 1,
@@ -27,7 +35,6 @@ const Experience = () => {
       institution: 'South Valley National University',
       location: 'Qena, Egypt',
       duration: '2022 - Present',
-      gpa: null,
       description: 'Senior year student at the Faculty of Computers and Artificial Intelligence – Computer Science Major'
     },
     {
@@ -61,8 +68,7 @@ const Experience = () => {
     <section id="experience" className="py-20">
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto">
-          {/* Header */}
-          <div className="text-center mb-16 animate-fade-in">
+          <div className="text-center mb-16" data-aos="fade-up">
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
               Work <span className="text-gradient">Experience</span>
             </h2>
@@ -73,8 +79,7 @@ const Experience = () => {
           </div>
 
           <div className="grid lg:grid-cols-2 gap-12">
-            {/* Experience Section */}
-            <div className="animate-slide-up">
+            <div data-aos="fade-up">
               <h3 className="text-2xl font-bold text-foreground mb-8 flex items-center gap-3">
                 <Building className="h-6 w-6 text-primary" />
                 Professional Experience
@@ -82,9 +87,10 @@ const Experience = () => {
 
               <div className="space-y-8">
                 {experiences.map((exp) => (
-                  <div 
+                  <div
                     key={exp.id}
                     className="relative bg-card rounded-xl p-6 border border-border hover:shadow-lg transition-all duration-300"
+                    data-aos="fade-up"
                   >
                     <div className="absolute -right-3 top-8 w-6 h-6 bg-primary rounded-full border-4 border-background"></div>
 
@@ -134,8 +140,7 @@ const Experience = () => {
               </div>
             </div>
 
-            {/* Education Section */}
-            <div className="animate-slide-up" style={{ animationDelay: '0.2s' }}>
+            <div data-aos="fade-up" data-aos-delay="200">
               <h3 className="text-2xl font-bold text-foreground mb-8 flex items-center gap-3">
                 <Calendar className="h-6 w-6 text-primary" />
                 Education & Certificates
@@ -143,11 +148,12 @@ const Experience = () => {
 
               <div className="space-y-8">
                 {education.map((edu) => (
-                  <div 
+                  <div
                     key={edu.id}
                     className="relative bg-card rounded-xl p-6 border border-border hover:shadow-lg transition-all duration-300"
+                    data-aos="fade-up"
                   >
-                    <div className="absolute -right-3 top-8 w-6 h-6 bg-blue-500 rounded-full border-4 border-background"></div>
+                    <div className="absolute -right-3 top-8 w-6 h-6 bg-primary rounded-full border-4 border-background"></div>
 
                     <div className="space-y-4">
                       <div>
@@ -176,11 +182,12 @@ const Experience = () => {
                 ))}
               </div>
 
-              {/* Certifications */}
-              <div className="mt-12 bg-gradient-to-r from-primary/10 to-blue-400/10 rounded-xl p-6 border border-primary/20">
-                <h4 className="text-lg font-bold text-foreground mb-4">
-                  Certifications & Achievements
-                </h4>
+              <div className="mt-12 bg-gradient-to-r from-primary/10 to-primary/5 rounded-xl p-6 border border-primary/20" data-aos="fade-up">
+                <a href="https://drive.google.com/drive/folders/1DkMFyWInjCGLw_8lQDDYLzkm9Ch7oywC?usp=drive_link">
+                  <h4 className="text-lg font-bold text-foreground mb-4 text-[#c8912b] flex items-center gap-2">
+                    Certifications & Achievements <ExternalLink />
+                  </h4>
+                </a>
                 <div className="space-y-2 text-muted-foreground">
                   {certifications.map((cert, index) => (
                     <div key={index}>• {cert}</div>
@@ -189,6 +196,7 @@ const Experience = () => {
               </div>
             </div>
           </div>
+
         </div>
       </div>
     </section>

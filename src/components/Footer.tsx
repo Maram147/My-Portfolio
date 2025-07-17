@@ -1,6 +1,5 @@
-
 import React from 'react';
-import { Heart, ArrowUp } from 'lucide-react';
+import { Heart, ArrowUp,Mail ,Phone ,MapPin} from 'lucide-react';
 
 const Footer = () => {
   const scrollToTop = () => {
@@ -10,69 +9,68 @@ const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className=" border-t border-border">
-      <div className="container mx-auto px-4 py-12">
-        <div className="max-w-6xl mx-auto">
-          {/* Footer Content */}
-          <div className="grid md:grid-cols-3 gap-8 mb-8">
-            {/* Brand Section */}
-            <div className="space-y-4">
-              <h3 className="text-2xl font-bold text-White">
-                Maram Mahmoud
-              </h3>
-              <p className="text-muted-foreground leading-relaxed">
-                Exiceted to create projects using React
-              </p>
-            </div>
+    <footer className="bg-gradient-to-tr from-background to-muted text-foreground border-t border-border shadow-inner">
+      <div className="container mx-auto px-6 py-12">
+        <div className="max-w-6xl mx-auto grid md:grid-cols-3 gap-8 mb-12">
+          {/* Brand Section */}
+          <div>
+            <h3 className="text-3xl font-extrabold text-primary mb-4">Maram Mahmoud</h3>
+            <p className="text-muted-foreground leading-relaxed">
+              Excited to create modern, interactive projects using React.
+            </p>
+          </div>
 
-            {/* Quick Links */}
-            <div className="space-y-4">
-              <h4 className="text-lg font-semibold text-foreground">
-                Quick Links
-              </h4>
-              <div className="space-y-2">
-                {[
-                  { label: 'about', id: 'about' },
-                  { label: 'skills', id: 'skills' },
-                  { label: 'projects', id: 'projects' },
-                  { label: 'experience', id: 'experience' },
-                  { label: 'contact', id: 'contact' }
-                ].map((link) => (
+          {/* Quick Links */}
+          <div>
+            <h4 className="text-xl font-semibold mb-4">Quick Links</h4>
+            <ul className="space-y-2">
+              {[
+                { label: 'About', id: 'about' },
+                { label: 'Skills', id: 'skills' },
+                { label: 'Projects', id: 'projects' },
+                { label: 'Experience', id: 'experience' },
+                { label: 'Contact', id: 'contact' },
+              ].map((link) => (
+                <li key={link.id}>
                   <button
-                    key={link.id}
                     onClick={() => {
-                      const element = document.getElementById(link.id);
-                      if (element) {
-                        element.scrollIntoView({ behavior: 'smooth' });
-                      }
+                      const el = document.getElementById(link.id);
+                      if (el) el.scrollIntoView({ behavior: 'smooth' });
                     }}
-                    className="block text-muted-foreground hover:text-primary transition-colors duration-200"
+                    className="text-muted-foreground hover:text-primary transition-colors duration-300"
                   >
                     {link.label}
                   </button>
-                ))}
-              </div>
-            </div>
-
-            {/* Contact Info */}
-            <div className="space-y-4">
-              <h4 className="text-lg font-semibold text-foreground">
-                contact me
-              </h4>
-              <div className="space-y-2 text-muted-foreground">
-                <div>mahmoudmaram002@gmail.com</div>
-                <div>+201021579696</div>
-                <div> Egypt,Qena</div>
-              </div>
-            </div>
+                </li>
+              ))}
+            </ul>
           </div>
 
-          {/* Bottom Section */}
-          <div className="border-t border-border pt-3 border-white ">
-            <div className="flex flex-col md:flex-row justify-center items-center gap-4 text-center">
-                <span>©made by Maram Mahmoud</span>
-            </div>
+          {/* Contact Info */}
+          <div>
+            <h4 className="text-xl font-semibold mb-4">Contact Me</h4>
+            <ul className="space-y-2 text-muted-foreground">
+              <li className='flex item-center gap-2'> <Mail /> mahmoudmaram002@gmail.com</li>
+              <li className='flex item-center gap-2'> <Phone />+20 102 157 9696</li>
+              <li className='flex item-center gap-2'> <MapPin />Egypt, Qena</li>
+            </ul>
           </div>
+        </div>
+
+        {/* Bottom Section */}
+        <div className="relative pt-6 border-t border-border flex flex-col items-center gap-3">
+          <span className="text-sm text-muted-foreground">
+            © {currentYear} Made by Maram Mahmoud
+          </span>
+
+          {/* Scroll to Top Button */}
+          <button
+            onClick={scrollToTop}
+            className="group bg-primary/10 hover:bg-primary text-primary hover:scale-105 hover:shadow-lg transition-all duration-300 p-2 rounded-full"
+            aria-label="Scroll to top"
+          >
+            <ArrowUp size={20} />
+          </button>
         </div>
       </div>
     </footer>
