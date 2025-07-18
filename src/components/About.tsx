@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-import { Code, Palette, Database, Globe } from 'lucide-react';
+import { Code, Palette, Database, ShieldCheck } from 'lucide-react';
 
 const About = () => {
   useEffect(() => {
@@ -12,12 +12,12 @@ const About = () => {
     {
       icon: Code,
       title: 'Frontend Development',
-      description: 'Expertise in React, Vue.js, and TypeScript'
+      description: 'Expertise in React, Tailwind,SASS (SCSS), and TypeScript'
     },
     {
       icon: Database,
-      title: 'Backend Development',
-      description: 'Node.js, Express.js, and databases'
+      title: 'WordPress Development',
+      description: 'Laragon and XAMPP'
     },
     {
       icon: Palette,
@@ -25,9 +25,9 @@ const About = () => {
       description: 'Creating attractive and user-friendly interfaces'
     },
     {
-      icon: Globe,
-      title: 'Full Stack Development',
-      description: 'Complete solutions from concept to implementation'
+      icon: ShieldCheck,
+      title: 'Software Testing',
+      description: 'Manual testing , Automated testing and quality assurance for web applications'
     }
   ];
 

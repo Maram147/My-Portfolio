@@ -46,7 +46,7 @@ const Header = () => {
         <nav className="flex items-center justify-between">
           {/* Logo */}
           <div className="text-2xl font-bold text-gradient flex items-center space-x-5 gap-2">
-            <Palette color='White' />  Maram 
+            <Palette className='text-foreground hover:text-primary'  />  Maram 
           </div>
 
           {/* Desktop Navigation */}

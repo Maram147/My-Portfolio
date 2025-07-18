@@ -1,6 +1,6 @@
 import React from 'react';
 import { ArrowDown, Download, Mail } from 'lucide-react';
-import { FaGithub, FaLinkedin } from 'react-icons/fa';
+import { FaFacebook, FaGithub, FaLinkedin } from 'react-icons/fa';
 import { Typewriter } from 'react-simple-typewriter';
 import { motion } from 'framer-motion';
 
@@ -11,6 +11,27 @@ const Hero = () => {
       element.scrollIntoView({ behavior: 'smooth' });
     }
   };
+
+  const socialLinks = [
+      {
+        icon: FaGithub,
+        name: 'GitHub',
+        link: 'https://github.com/Maram147',
+        color: 'hover:text-gray-600'
+      },
+      {
+        icon: FaLinkedin,
+        name: 'LinkedIn',
+        link: 'https://linkedin.com/in/devmaraam',
+        color: 'hover:text-blue-600'
+      },
+      {
+        icon: FaFacebook,
+              name: 'Facebook',
+              link: 'https://www.facebook.com/share/16Yac2bpx9/',
+              color: 'hover:text-blue-600'
+      }
+    ];
 
   return (
     <motion.section
@@ -28,7 +49,7 @@ const Hero = () => {
         <div className="flex flex-col lg:flex-row items-center justify-between gap-5 lg:gap-20 mt-20">
           {/* Left: Text */}
           <motion.div
-            className="flex-1 text-center lg:text-left"
+            className="flex-1 text-center lg:text-left justify-center lg:justify-start"
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
@@ -74,17 +95,20 @@ const Hero = () => {
             </div>
 
             {/* Socials */}
-            <div className="flex justify-center lg:justify-start space-x-6">
-              <a href="https://github.com/Maram147" className="p-3 rounded-full bg-secondary hover:bg-accent transition hover:scale-110">
-                <FaGithub className="h-5 w-5 text-foreground" />
-              </a>
-              <a href="https://linkedin.com/devmaraam" className="p-3 rounded-full bg-secondary hover:bg-accent transition hover:scale-110">
-                <FaLinkedin className="h-5 w-5 text-foreground" />
-              </a>
-              <a href="mailto:mahmoudmaram002@gmail.com" className="p-3 rounded-full bg-secondary hover:bg-accent transition hover:scale-110">
-                <Mail className="h-5 w-5 text-foreground" />
-              </a>
-            </div>
+            <div className="flex gap-4">
+                  {socialLinks.map((social, index) => (
+                    <a
+                      key={index}
+                      href={social.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className={`p-3 bg-card rounded-full border border-border hover:shadow-lg transition-all duration-200 hover:scale-110 ${social.color}`}
+                      title={social.name}
+                    >
+                      <social.icon className="h-5 w-5" />
+                    </a>
+                  ))}
+                </div>
           </motion.div>
 
           {/* Right: Image */}
@@ -95,11 +119,18 @@ const Hero = () => {
             viewport={{ once: true }}
             transition={{ duration: 1 }}
           >
-            <img
-              src="/public/maram.jpeg"
-              alt="Maram"
-              className="rounded-full object-cover w-80 h-80 md:w-72 md:h-72 lg:w-80 lg:h-80 shadow-lg shadow-[#c8912b] hover:rotate-2 transition-transform duration-300 ease-in-out"
-            />
+           <img
+  src="/public/maram.jpeg"
+  alt="Maram"
+  className="rounded-full object-cover object-center 
+             w-40 h-40
+             md:w-90 md:h-90 
+             lg:w-80 lg:h-80 
+             xl:w-96 xl:h-96 
+             shadow-lg shadow-[#c8912b] 
+             hover:rotate-2 transition-transform duration-300 ease-in-out"
+/>
+
           </motion.div>
         </div>
       </div>

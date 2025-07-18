@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { Mail, Phone, MapPin, Send } from 'lucide-react';
-import { FaGithub } from "react-icons/fa";
+import { FaFacebook, FaGithub } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa";
 
 const Contact = () => {
@@ -65,10 +65,10 @@ const Contact = () => {
       color: 'hover:text-blue-600'
     },
     {
-      icon: Mail,
-      name: 'Email',
-      link: 'mailto:mahmoudmaram002@gmail.com',
-      color: 'hover:text-red-500'
+      icon: FaFacebook,
+      name: 'Facebook',
+      link: 'https://www.facebook.com/share/16Yac2bpx9/',
+      color: 'hover:text-blue-600'
     }
   ];
 
