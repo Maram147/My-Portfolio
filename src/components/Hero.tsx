@@ -25,12 +25,12 @@ const Hero = () => {
         link: 'https://linkedin.com/in/devmaraam',
         color: 'hover:text-blue-600'
       },
-      {
-        icon: FaFacebook,
-              name: 'Facebook',
-              link: 'https://www.facebook.com/share/16Yac2bpx9/',
-              color: 'hover:text-blue-600'
-      }
+      // {
+      //   icon: FaFacebook,
+      //         name: 'Facebook',
+      //         link: 'https://www.facebook.com/share/16Yac2bpx9/',
+      //         color: 'hover:text-blue-600'
+      // }
     ];
 
   return (
