@@ -3,7 +3,7 @@ import { ArrowDown, Download, Mail } from 'lucide-react';
 import { FaFacebook, FaGithub, FaLinkedin } from 'react-icons/fa';
 import { Typewriter } from 'react-simple-typewriter';
 import { motion } from 'framer-motion';
-
+import maram from '../assets/images/maram.jpeg'
 const Hero = () => {
   const scrollToAbout = () => {
     const element = document.getElementById('about');
@@ -120,7 +120,7 @@ const Hero = () => {
             transition={{ duration: 1 }}
           >
            <img
-  src="/public/maram.jpeg"
+  src={maram}
   alt="Maram"
   className="rounded-full object-cover object-center 
              w-40 h-40

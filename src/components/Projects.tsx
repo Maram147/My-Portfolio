@@ -2,6 +2,9 @@ import React, { useState } from 'react';
 import { ExternalLink, Eye } from 'lucide-react';
 import { FaGithub } from "react-icons/fa";
 import { motion ,Variants } from 'framer-motion';
+import freshcart from '../assets/images/Fresh-Cart.png';
+import recipeapp from '../assets/images/Recipe-App.png';
+import dwayee from '../assets/images/Dwayee.png';
 
 const fadeInUp: Variants = {
   hidden: {
@@ -26,7 +29,7 @@ const Projects = () => {
       id: 1,
       title: 'Dwayee',
       description: 'Dwayee - دوائي is a smart, pharmacy-focused platform designed to revolutionize the way users search for and order medications.',
-      image: '/Dwayee.png',
+      image: dwayee,
       technologies: ['React', 'Tailwind', 'My SQL', 'Laravel'],
       category: 'Front-End',
       demoLink: 'https://dwayee-1.vercel.app/',
@@ -37,7 +40,7 @@ const Projects = () => {
       id: 2,
       title: 'Fresh-Cart',
       description:'The Fresh Cart Ecommerce is a modern web application designed to simplify the process of browsing, purchasing, and managing products.',
-      image: '/assets/images/Fresh-Cart.png',
+      image: freshcart,
       technologies: ['React', 'Tailwind', 'My SQL', 'Laravel'],
       category: 'Front-End',
       demoLink: 'https://fresh-cart-five-murex.vercel.app/',
@@ -48,7 +51,7 @@ const Projects = () => {
       id: 3,
       title: 'Recipe-App',
       description: 'A React web app that helps users discover meals by category, origin, and ingredients',
-      image: '/assets/images/Recipe-App.png',
+      image: recipeapp,
       technologies: ['React', 'Tailwind','SASS', 'My SQL', 'Laravel'],
       category: 'Front-End',
       demoLink: 'https://recipe-app-three-jade.vercel.app/',
