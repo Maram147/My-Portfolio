@@ -27,6 +27,8 @@ const Skills = () => {
         { name: "Tailwind CSS", level: 88 },
         { name: "WordPress", level: 75 },
         { name: "Sass/SCSS", level: 80 },
+        { name: "Bootstrap", level: 70 },
+        { name: "Next.js", level: 80 },
       ],
     },
     {
@@ -34,10 +36,12 @@ const Skills = () => {
       skills: [
         { name: "Git/GitHub", level: 90 },
         { name: "Docker", level: 70 },
-        { name: "AWS", level: 60 },
+        { name: "VS Code", level: 90 },
         { name: "Figma", level: 75 },
         { name: "Photoshop", level: 70 },
         { name: "Linux", level: 65 },
+        { name: "Postman", level: 80  },
+        
       ],
     },
   ];
