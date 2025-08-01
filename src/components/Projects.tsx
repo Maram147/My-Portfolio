@@ -5,6 +5,7 @@ import { motion ,Variants } from 'framer-motion';
 import freshcart from '../assets/images/Fresh-Cart.png';
 import recipeapp from '../assets/images/Recipe-App.png';
 import dwayee from '../assets/images/Dwayee.png';
+import restaurant from '../assets/images/Restaurant-Platform.png'
 
 const fadeInUp: Variants = {
   hidden: {
@@ -56,6 +57,17 @@ const Projects = () => {
       category: 'Front-End',
       demoLink: 'https://recipe-app-three-jade.vercel.app/',
       githubLink: 'https://github.com/Maram147/Recipe-app',
+      featured: true
+    },
+    {
+      id: 4,
+      title: 'Restaurant Management System',
+      description: 'A comprehensive system for managing restaurant operations, including order processing, inventory management, and customer interactions.',
+      image: restaurant,
+      technologies: ['React', 'Tailwind','Next', 'shadcn-ui'],
+      category: 'Front-End',
+      demoLink: 'https://restaurant-platform-final.vercel.app/',
+      githubLink: 'https://github.com/Maram147/Restaurant-Platform',
       featured: true
     },
   ];
