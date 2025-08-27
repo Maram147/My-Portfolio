@@ -79,7 +79,7 @@ const Hero = () => {
             {/* Buttons */}
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start items-center mb-8">
               <a
-                href="/public/CV  Maram Mahmoud.pdf"
+                href="/CVMaramMahmoud.pdf"
                 download
                 className="bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-3 rounded-full font-semibold transition-all duration-200 hover:scale-105 flex items-center gap-2"
               >
