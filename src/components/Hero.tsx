@@ -72,14 +72,16 @@ const Hero = () => {
             </h2>
 
             <p className="text-md md:text-lg text-muted-foreground mb-8 max-w-xl leading-relaxed mx-auto lg:mx-0">
-              Specialized in developing modern web applications using React, Node.js, and other cutting-edge technologies.
-              I love creating innovative digital solutions that combine functionality with beautiful design.
+             Motivated entry-level Front-end Developer with hands-on experience in building responsive and 
+dynamic web 
+applications using React, JavaScript, and modern front-end tools. Proven ability to collaborate with 
+cross-functional teams and deliver high-quality user experiences. 
             </p>
 
             {/* Buttons */}
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start items-center mb-8">
               <a
-                href="/CVMaramMahmoud.pdf"
+                href="/CVMaramMahmoudMostafa.pdf"
                 download
                 className="bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-3 rounded-full font-semibold transition-all duration-200 hover:scale-105 flex items-center gap-2"
               >

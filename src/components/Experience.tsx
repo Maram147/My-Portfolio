@@ -25,6 +25,21 @@ const Experience = () => {
       ],
       technologies: ['WordPress', 'HTML', 'CSS', 'PHP', 'MySQL'],
       current: false
+    },
+    {
+      id: 2,
+      position: 'SEO Intern',
+      company: 'NetArabia',
+      location: 'Qena, Egypt',
+      duration: 'Sep 2025',
+      description: [
+        'Conducted keyword research to optimize website content.',
+        'Analyzed website traffic and performance using SEO tools.',
+        'Collaborated with the content team to implement SEO best practices.',
+        'Monitored and reported on SEO metrics to track progress.'
+      ],
+      technologies: ['SEO Tools', 'Google Analytics', 'Keyword Research'],
+      current: false
     }
   ];
 
@@ -56,12 +71,16 @@ const Experience = () => {
   ];
 
   const certifications = [
+    'SEO Internship – NetArabia',
+    'Data Analysis-DEPI',
+    'SoftWare Testing – ITI',
+    'ECPC Co-Coach ',
     'ICPC – ECPC Finalist (2023 – 2024)',
     'Mentor in ICPC Community at South Valley University',
     'HR Head at Google Developer Student Club – SVU',
-    'Web Developer Intern – NetArabia',
+    'Web Developer Internship – NetArabia',
     'Frontend Developer Diploma – Route Academy',
-    'Software Engineering Certificate – ITI'
+    'Software Engineering Fundamentals – ITI'
   ];
 
   return (

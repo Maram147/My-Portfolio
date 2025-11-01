@@ -74,9 +74,9 @@ const Projects = () => {
 
   const filters = [
     { id: 'all', label: 'All Projects' },
-    { id: 'fullstack', label: 'Full Stack' },
-    { id: 'Front-End', label: 'Front-End' },
-    { id: 'backend', label: 'Backend' }
+    // { id: 'fullstack', label: 'Full Stack' },
+    // { id: 'Front-End', label: 'Front-End' },
+    // { id: 'backend', label: 'Backend' }
   ];
 
   const filteredProjects = activeFilter === 'all'
@@ -219,9 +219,11 @@ const Projects = () => {
               <p className="text-muted-foreground text-lg mb-6">
                 Let's talk about how I can help you turn your idea into a digital reality.
               </p>
+              <a href="#contact">
               <button className="bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-4 rounded-full font-semibold transition-all duration-200 hover:scale-105">
                 Contact me now
               </button>
+              </a>
             </div>
           </motion.div>
         </div>

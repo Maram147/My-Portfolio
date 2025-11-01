@@ -139,7 +139,7 @@ const Skills = () => {
               <p className="text-muted-foreground text-lg">
                 I believe in the importance of continuous learning in the
                 fast-evolving world of technology. Currently learning Next.js
-                and React Native to expand my skill set.
+                and Flutter to expand my skill set.
               </p>
             </div>
           </motion.div>

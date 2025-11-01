@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-import { Code, Palette, Database, ShieldCheck } from 'lucide-react';
+import { Code, ChartBar, Database, ShieldCheck } from 'lucide-react';
 
 const About = () => {
   useEffect(() => {
@@ -20,8 +20,8 @@ const About = () => {
       description: 'Laragon and XAMPP'
     },
     {
-      icon: Palette,
-      title: 'UI/UX Design',
+      icon: ChartBar,
+      title: 'Data Analysis',
       description: 'Creating attractive and user-friendly interfaces'
     },
     {
