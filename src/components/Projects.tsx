@@ -64,7 +64,7 @@ const Projects = () => {
       title: 'Restaurant Management System',
       description: 'A comprehensive system for managing restaurant operations, including order processing, inventory management, and customer interactions.',
       image: restaurant,
-      technologies: ['React', 'Tailwind','Next', 'shadcn-ui'],
+      technologies: ['Next.js', 'Tailwind', 'shadcn-ui'],
       category: 'Front-End',
       demoLink: 'https://restaurant-platform-final.vercel.app/',
       githubLink: 'https://github.com/Maram147/Restaurant-Platform',

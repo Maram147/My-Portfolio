@@ -16,7 +16,7 @@ const Footer = () => {
           <div>
             <h3 className="text-3xl font-extrabold text-primary mb-4">Maram Mahmoud</h3>
             <p className="text-muted-foreground leading-relaxed">
-              Excited to create modern, interactive projects using React.
+              Excited to create modern, interactive projects using React & Next.js.
             </p>
           </div>
 
